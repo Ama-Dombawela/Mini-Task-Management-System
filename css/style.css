@@ -1,0 +1,60 @@
+:root{
+  --page-bg:#f3f6fb;
+  --surface:#ffffff;
+  --text:#1f2937;
+  --muted:#6b7280;
+  --border:#e5e7eb;
+  --shadow:0 18px 45px rgba(15,23,42,.08);
+  --shadow-soft:0 8px 24px rgba(15,23,42,.06);
+  --radius:1rem;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+body{font-family:'Plus Jakarta Sans',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:linear-gradient(180deg,#f8fbff 0%, var(--page-bg) 100%);color:var(--text);padding-bottom:72px;}
+
+.navbar{box-shadow:0 8px 30px rgba(0,0,0,.14)}
+.site-footer{position:fixed;left:0;right:0;bottom:0;z-index:1030;box-shadow:0 -8px 30px rgba(0,0,0,.14)}
+.navbar-nav .nav-link{padding:.35rem .5rem;font-weight:500}
+.search-form{min-width:280px}
+.search-input{border-color:rgba(255,255,255,.25)}
+
+.hero-banner,.content-panel,.table-wrap,.task-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow-soft)}
+.hero-banner{padding:1.5rem}
+.content-panel{padding:1.5rem}
+
+.task-card{overflow:hidden;transition:transform .18s ease, box-shadow .18s ease}
+.task-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.task-card-primary{background:linear-gradient(160deg,#0d6efd 0%, #1f7af5 100%);color:#fff}
+.task-card-success{background:linear-gradient(160deg,#198754 0%, #1ca35d 100%);color:#fff}
+.task-card-warning{background:linear-gradient(160deg,#d97706 0%, #f59e0b 100%);color:#fff}
+.task-card-danger{background:linear-gradient(160deg,#dc3545 0%, #f43f5e 100%);color:#fff}
+.task-card .btn-light{font-weight:600}
+
+.table-wrap{padding:0;overflow:hidden}
+.table-wrap .table{margin-bottom:0}
+.table-wrap thead th{background:#f8fafc;color:var(--muted);font-size:.78rem;text-transform:uppercase;letter-spacing:.04em;border-bottom:1px solid var(--border)}
+.table-wrap td,.table-wrap th{padding:1rem 1rem;border-color:var(--border)}
+
+.badge-high{background:#fff1f2;color:#be123c}
+.badge-medium{background:#fffbeb;color:#b45309}
+.badge-low{background:#ecfdf5;color:#047857}
+.badge-pending{background:#f3f4f6;color:#4b5563}
+.badge-completed{background:#dcfce7;color:#166534}
+
+.loading-overlay{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(255,255,255,.78);z-index:1050}
+.loading-overlay.active{display:flex}
+
+.form-control:focus,.btn:focus{box-shadow:0 0 0 .2rem rgba(13,110,253,.15)}
+
+@media (max-width: 991.98px){
+  .search-form{width:100%}
+  .search-input{min-width:0}
+  .navbar-collapse{padding-top:.75rem}
+}
+
+@media (max-width: 575.98px){
+  .hero-banner,.content-panel{padding:1.1rem}
+  body{padding-bottom:82px}
+}
+
