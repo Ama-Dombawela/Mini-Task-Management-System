@@ -1,6 +1,6 @@
 # Mini Task Management System
 
-Simple task manager built for the web developer Intern Practical Test.
+Simple task manager built for the PHP Full Stack Intern Practical Test.
 
 ---
 
